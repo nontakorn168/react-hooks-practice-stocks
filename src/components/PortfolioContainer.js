@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Stock from "./Stock";
 
-function PortfolioContainer({portfolioStocks,setPortfolioStocks}) {
+function PortfolioContainer({sortBy ,portfolioStocks,setPortfolioStocks}) {
   
   function handleSellStock(stock) {
     setPortfolioStocks(portfolioStocks.filter((s) => s.id !== stock.id));
@@ -14,7 +14,7 @@ function PortfolioContainer({portfolioStocks,setPortfolioStocks}) {
       
       {portfolioStocks.length > 0 ? (
         portfolioStocks.map((stock) => (
-          <Stock key={stock.id} Name={stock.name} Price={stock.price} stock={stock} isPortfolio={true} SellStock={handleSellStock} />
+          <Stock sortBy={sortBy} key={stock.id} Name={stock.name} Price={stock.price} stock={stock} isPortfolio={true} SellStock={handleSellStock} />
         ))
       ) : (
         <p>No stocks in portfolio</p>

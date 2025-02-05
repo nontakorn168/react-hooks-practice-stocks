@@ -1,7 +1,7 @@
 import { id } from "date-fns/locale";
 import React, {useState} from "react";
 
-function Stock({stock,Name, Price,AddStock, SellStock}) {
+function Stock({sortBy ,stock,Name, Price,AddStock, SellStock}) {
   
   function handleClick() {
     if (AddStock) {

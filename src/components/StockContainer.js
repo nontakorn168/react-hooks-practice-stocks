@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
 import Stock from "./Stock";
 
-function StockContainer({portfolioStocks, setPortfolioStocks}) {
-  const [stocks, setStocks] = useState([])
+function StockContainer({sortBy,portfolioStocks, setPortfolioStocks,stocks, setStocks}) {
+
   
 
 
